@@ -1,18 +1,18 @@
 require('dotenv').config()
 const express = require('express')
 const { connectDB } = require('./src/config/db')
-const jugadoresRouter = require('./src/api/routes/jugadores')
-const clubesRouter = require('./src/api/routes/clubes')
-const ligasRouter = require('./src/api/routes/ligas')
+const modelsRouter = require('./src/api/routes/models')
+const brandsRouter = require('./src/api/routes/brands')
+const usersRouter = require('./src/api/routes/users')
 
 const app = express()
 
 app.use(express.json())
 connectDB()
 
-app.use('/api/v1/ligas', ligasRouter)
-app.use('/api/v1/clubes', clubesRouter)
-app.use('/api/v1/jugadores', jugadoresRouter)
+app.use('/api/v1/users', usersRouter)
+app.use('/api/v1/brands', brandsRouter)
+app.use('/api/v1/models', modelsRouter)
 
 app.use('*', (req, res, next) => {
   return res.status(404).json('Route not found')
