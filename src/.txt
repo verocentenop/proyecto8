@@ -1,5 +1,9 @@
 IhdMO23TUaVBdI1e
 
-DB_URL=mongodb+srv://verocentenop:<db_password>@cluster8.sv8vz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster8
+DB_URL=mongodb+srv://verocentenop:IhdMO23TUaVBdI1e@cluster8.sv8vz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster8
 
 JWT_SECRET= 987tfgiuwvacjuv8guiwbqne56ryftv
+
+CLOUD_NAME=dzqoduh1s
+API_KEY=414299566927797
+API_SECRET=E-7n7sNi30sitLraVj9IrO0UaoE
