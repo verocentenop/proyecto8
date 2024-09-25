@@ -1,19 +1,19 @@
 const mongoose = require('mongoose')
 
-const brandSchema = new mongoose.Schema(
+const authorSchema = new mongoose.Schema(
   {
     name: { type: String, required: true },
     image: { type: String, required: true },
     country: { type: String, required: true },
-    models: [
+    books: [
       {
         type: mongoose.Types.ObjectId,
-        ref: 'models',
+        ref: 'books',
         required: false
       }
     ]
   },
-  { timestamps: true, collection: 'brands' }
+  { timestamps: true, collection: 'authors' }
 )
-const Brand = mongoose.model('brands', brandSchema, 'brands')
-module.exports = Brand
+const Author = mongoose.model('authors', authorSchema, 'authors')
+module.exports = Author
