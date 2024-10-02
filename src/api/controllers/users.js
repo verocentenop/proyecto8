@@ -51,6 +51,10 @@ const login = async (req, res, next) => {
 const putUser = async (req, res, next) => {
   try {
     const { id } = req.params
+if (req.user._id.toString() !== id) {
+      return res.status(400).json('You cannot modify other users')
+    }
+    
     const newUser = new User(req.body)
     newUser._id = id
     const userUpdated = await User.findByIdAndUpdate(id, newUser, {
